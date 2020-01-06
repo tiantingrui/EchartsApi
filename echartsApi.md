@@ -8,7 +8,7 @@ Echarts 配置项
 
 
 
-```
+```js
 series: [
   {
     name: '销量',
@@ -37,7 +37,7 @@ series: [
 
 
 
-```
+```js
 // 一种实际的开发场景，对于双Y轴添加对应的标识线
 series: [
   {
@@ -61,7 +61,7 @@ series: [
 
 
 
-```
+```js
 // markline的基本配置，可根据官网详细api来达到想要的效果
 markline: {
   symbol: ['none', 'none'],
@@ -88,7 +88,7 @@ markline: {
 
 
 
-```
+```js
 // 这里改变的是双Y轴情况下改变其中一个坐标轴的颜色
 yAxis: [
   {
@@ -108,5 +108,32 @@ yAxis: [
     show: true
   },
 ]
+```
+
++ areaStyle  给折线加阴影区域
+
+```js
+// 在series 对应的折线加阴影面积
+series: {
+    name: taskName,
+    type: 'line',
+    data: this.taskRateData,
+    smooth: true,
+    areaStyle: { // 加阴影区域
+        // color: 'blue',
+        normal: {
+            // color: 'blue'
+        }
+    },
+    hoverAnimation: true,
+    itemStyle: {
+        normal: {
+            color: '#D95850', // 折点颜色
+                lineStyle: {
+                    color: '#D95850' // 折线颜色
+                }
+        }
+    }
+}
 ```
 
